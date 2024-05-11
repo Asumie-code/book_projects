@@ -1,15 +1,31 @@
+import './App.css';
+import Nav from './components/Nav'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 
-import './App.css'
-import Pdf from './components/Pdf'
+import Books from './views/Books';
+import Container from '@mui/material/Container'
+
+
+
+
 function App() {
-
-
-
   return (
-    <>
-      <Pdf />
-    </>
-  )
+    <Router>
+
+      <Nav />
+      <Container maxWidth='xl' sx={{ mb: 2.5, mt: 15 }}>
+        <Routes>
+          <Route caseSensitive path='/' element={
+            <Books />
+          } />
+          <Route caseSensitive path='/projects' element={<Books />} />
+    
+        </Routes>
+      </Container>
+
+
+    </Router>
+  );
 }
 
-export default App
+export default App;

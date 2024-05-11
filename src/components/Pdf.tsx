@@ -8,7 +8,6 @@ export default function Pdf() {
   const [numPages, setNumPages] = useState(1);
   const [pageNumber, setPageNumber] = useState(1);
 
-  function onDocumentLoadSuccess({numPages}) {
     setNumPages(numPages);
     setPageNumber(1);
   }
