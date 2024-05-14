@@ -15,7 +15,7 @@ import { colors } from '../util/util'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-const pages = ['About', 'Skills', 'Projects', 'Contact']
+const pages = ['Books']
 
 const Nav = (): JSX.Element => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
@@ -51,7 +51,7 @@ const Nav = (): JSX.Element => {
               textDecoration: 'none',
             }}
           >
-            ISSAM
+            Home
           </Typography>
 
 
@@ -108,7 +108,7 @@ const Nav = (): JSX.Element => {
               textDecoration: 'none',
             }}
           >
-            ISSAM
+            Home
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page, index) => (

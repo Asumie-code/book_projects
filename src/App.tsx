@@ -4,7 +4,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 
 import Books from './views/Books';
 import Container from '@mui/material/Container'
-
+import Home from './views/Home';
 
 
 
@@ -16,9 +16,9 @@ function App() {
       <Container maxWidth='xl' sx={{ mb: 2.5, mt: 15 }}>
         <Routes>
           <Route caseSensitive path='/' element={
-            <Books />
+            <Home />
           } />
-          <Route caseSensitive path='/projects' element={<Books />} />
+          <Route caseSensitive path='/books' element={<Books />} />
     
         </Routes>
       </Container>
