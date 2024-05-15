@@ -5,6 +5,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import Books from './views/Books';
 import Container from '@mui/material/Container'
 import Home from './views/Home';
+import Pdf from './components/Pdf'
 
 
 
@@ -19,6 +20,8 @@ function App() {
             <Home />
           } />
           <Route caseSensitive path='/books' element={<Books />} />
+          <Route caseSensitive path='/' element={<Books />} />
+          <Route caseSensitive path='/pdf/assets/:pdf' element={<Pdf />} />
     
         </Routes>
       </Container>

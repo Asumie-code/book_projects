@@ -7,6 +7,7 @@ import { CardActionArea } from '@mui/material';
 import { useScaleAnimation } from "../util/animationHooks";
 import { type allowComponentProp } from '../util/typeUtil';
 import { animated } from '@react-spring/web';
+import { useNavigate } from "react-router-dom";
 
 const AnimatedCard: allowComponentProp<typeof Card> = animated(Card)
 
@@ -23,13 +24,13 @@ interface PCardProps {
 
 const BCard = ({projectTitle = 'Default Title', mainImage, delay }: PCardProps): JSX.Element => {
 
-
+const navigate = useNavigate()
 
   return (
     <div>
 
       <AnimatedCard data-testid='pcard' sx={{ '&:hover': { boxShadow: '0px 0px 5px 5px  #2E4FF2' }, maxWidth: 345 }} style={useScaleAnimation(delay)}>
-        <CardActionArea onClick={() => {}}>
+        <CardActionArea onClick={() => {navigate('/pdf/assets/math.pdf?url')}}>
           <CardMedia
             component="img"
             height="240"
