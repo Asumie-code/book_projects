@@ -20,7 +20,6 @@ function App() {
             <Home />
           } />
           <Route caseSensitive path='/books' element={<Books />} />
-          <Route caseSensitive path='/' element={<Books />} />
           <Route caseSensitive path='/pdf/assets/:pdf' element={<Pdf />} />
     
         </Routes>
