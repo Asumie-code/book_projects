@@ -1,4 +1,8 @@
 import { Button, Paper, TextField} from "@mui/material"
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
+import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { ChangeEvent } from "react"
 
 
@@ -65,12 +69,15 @@ const Controls = (controlProps: Controlprops): JSX.Element => {
       };
     
     return (
-        <Paper>
-            <Button onClick={goToFirstPage}>gottofirstpage</Button>
-            <Button onClick={goToPreviousPage}>gottopreviouspage</Button>
-            <TextField name="pageNumber" value={pageNumber} onChange={onPageChange}   label="Outlined" variant="outlined"  /> of {pageNumber}
-            <Button onClick={goToNextPage}>gottonextpage</Button>
-            <Button onClick={goToLastPage}>gottolastpage</Button>
+        <Paper  sx={{
+            padding: 1, 
+
+        }}>
+            <Button onClick={goToFirstPage}><KeyboardDoubleArrowLeftIcon /></Button>
+            <Button onClick={goToPreviousPage}><KeyboardArrowLeftIcon /></Button>
+            <TextField name="pageNumber" value={pageNumber} onChange={onPageChange}   label="Outlined" variant="outlined" size="small"  /> of {pageNumber}
+            <Button onClick={goToNextPage}><KeyboardArrowRightIcon /></Button>
+            <Button onClick={goToLastPage}><KeyboardDoubleArrowRightIcon /></Button>
             <Button onClick={zoomIn}>zoomin</Button>
             <Button onClick={zoomOut}>zoomout</Button>
 

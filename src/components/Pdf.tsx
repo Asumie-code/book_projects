@@ -28,13 +28,17 @@ export default function Pdf() {
 
   return (
     <Container >
-      <Controls 
-                   scale={scale}
-                   setScale={setScale}
-                   numPages={numPages}
-                   pageNumber={pageNumber}
-                   setPageNumber={setPageNumber}
-      />
+      <div style={{position: "fixed"}}>
+          <Controls 
+                      
+                      scale={scale}
+                      setScale={setScale}
+                      numPages={numPages}
+                      pageNumber={pageNumber}
+                      setPageNumber={setPageNumber}
+          />
+
+      </div>
        <Document
           
           file={books[0]}
