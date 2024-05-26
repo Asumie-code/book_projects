@@ -6,7 +6,7 @@ import Controls from "./Controls";
 import 'react-pdf/dist/Page/TextLayer.css';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 
-import books from "./files";
+import books from "../assets/data/files";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 
@@ -18,17 +18,24 @@ export default function Pdf() {
    const [scale, setScale] = useState(2);
    const [numPages, setNumPages] = useState(0);
    const [pageNumber, setPageNumber] = useState(1);
-   const [isLoading, setIsLoading] = useState(true);
+   const [file, setFile] = useState<File>()
   function onDocumentLoadSuccess({ numPages }: any) {
     setNumPages(numPages);
-    setIsLoading(false);
   }
+
+    for(const path in books) {
+      if(path.includes(pdf!)) {
+        books[path]().then((mod ) => {
+          setFile((mod as {default: File}).default as File)
+          console.log(mod)
+        })
+      }
+    }
 
 
 
   return (
     <Container >
-      <div style={{position: "fixed"}}>
           <Controls 
                       
                       scale={scale}
@@ -37,11 +44,9 @@ export default function Pdf() {
                       pageNumber={pageNumber}
                       setPageNumber={setPageNumber}
           />
-
-      </div>
        <Document
           
-          file={books[0]}
+          file={file}
           onLoadSuccess={onDocumentLoadSuccess}
        >
           <Page pageNumber={pageNumber} scale={scale} />

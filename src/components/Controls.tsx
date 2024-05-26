@@ -3,6 +3,8 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import ZoomInIcon from '@mui/icons-material/ZoomIn';
+import ZoomOutIcon from '@mui/icons-material/ZoomOut';
 import { ChangeEvent } from "react"
 
 
@@ -27,8 +29,8 @@ const Controls = (controlProps: Controlprops): JSX.Element => {
     const isLastPage: boolean = pageNumber === numPages
 
 
-    const firstPageClass = isFirstPage ? 'disabled': 'clickable'
-    const lastPageClass = isLastPage ? 'disabled' : 'clickable'
+    const firstPageClass = isFirstPage ? true : false
+    const lastPageClass = isLastPage ? true  : false
 
 
     const goToFirstPage = (): void => {
@@ -56,8 +58,8 @@ const Controls = (controlProps: Controlprops): JSX.Element => {
     const isMaxZoom: boolean = scale >= 2.0;
 
     
-    const zoomOutClass = isMinZoom ? 'disabled' : 'clickable';
-    const zoomInClass = isMaxZoom ? 'disabled' : 'clickable';
+    const zoomOutClass = isMinZoom ? true : false;
+    const zoomInClass = isMaxZoom ? true : false;
 
 
     const zoomOut = (): void => {
@@ -71,16 +73,17 @@ const Controls = (controlProps: Controlprops): JSX.Element => {
     return (
         <Paper  sx={{
             padding: 1, 
+            position: 'fixed', 
+            zIndex: 50000
 
         }}>
-            <Button onClick={goToFirstPage}><KeyboardDoubleArrowLeftIcon /></Button>
-            <Button onClick={goToPreviousPage}><KeyboardArrowLeftIcon /></Button>
+            <Button onClick={goToFirstPage} disabled={firstPageClass}><KeyboardDoubleArrowLeftIcon /></Button>
+            <Button onClick={goToPreviousPage} disabled={firstPageClass}><KeyboardArrowLeftIcon /></Button>
             <TextField name="pageNumber" value={pageNumber} onChange={onPageChange}   label="Outlined" variant="outlined" size="small"  /> of {pageNumber}
-            <Button onClick={goToNextPage}><KeyboardArrowRightIcon /></Button>
-            <Button onClick={goToLastPage}><KeyboardDoubleArrowRightIcon /></Button>
-            <Button onClick={zoomIn}>zoomin</Button>
-            <Button onClick={zoomOut}>zoomout</Button>
-
+            <Button onClick={goToNextPage} disabled={lastPageClass}><KeyboardArrowRightIcon /></Button>
+            <Button onClick={goToLastPage} disabled={lastPageClass}><KeyboardDoubleArrowRightIcon /></Button>
+            <Button onClick={zoomIn} disabled={zoomInClass}><ZoomInIcon /></Button>
+            <Button onClick={zoomOut} disabled={zoomOutClass}><ZoomOutIcon /></Button>
 
         </Paper>
     )
