@@ -17,20 +17,20 @@ interface PCardProps {
   projectTitle?: string,
   desc?: string,
   sourceCodeLink?: string,
-  link?: string,
+  link: string,
   imgs: { original: string }[],
   delay?: number
 }
 
-const BCard = ({projectTitle = 'Default Title', mainImage, delay }: PCardProps): JSX.Element => {
+const BCard = ({projectTitle = 'Default Title', mainImage, delay, link }: PCardProps): JSX.Element => {
 
 const navigate = useNavigate()
-
+  console.log(link)
   return (
     <div>
 
       <AnimatedCard data-testid='pcard' sx={{ '&:hover': { boxShadow: '0px 0px 5px 5px  #2E4FF2' }, maxWidth: 345 }} style={useScaleAnimation(delay)}>
-        <CardActionArea onClick={() => {navigate('/pdf/assets/math.pdf?url')}}>
+        <CardActionArea onClick={() => {navigate(`/pdf/assets/${link.replace('../pdf/', '')}`)}}>
           <CardMedia
             component="img"
             height="240"
