@@ -16,7 +16,6 @@ interface PCardProps {
   mainImage: string,
   projectTitle?: string,
   desc?: string,
-  sourceCodeLink?: string,
   link: string,
   imgs: { original: string }[],
   delay?: number
