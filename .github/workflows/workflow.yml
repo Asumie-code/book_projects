@@ -21,6 +21,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: books/math/college_calculus_Ap_summary.tex
+          args: -f
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
         with:
