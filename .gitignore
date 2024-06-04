@@ -24,9 +24,9 @@ dist-ssr
 *.sln
 *.sw?
 
-#latex fiels 
-# *.aux
-# *.fdb_latexmk
-# *.fls
-# *.synctex.gz
+latex fiels 
+*.aux
+*.fdb_latexmk
+*.fls
+*.synctex.gz
 # *.pdf
