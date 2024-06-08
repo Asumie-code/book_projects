@@ -1,6 +1,8 @@
 \documentclass{article}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{booktabs, 
+            makecell, multirow, tabularx}
 
 
 \title{derivative's}
@@ -252,13 +254,38 @@
                 \item if \(f''(c) > 0\) then \(f\) has  relative minimum at \(x = c\)
             \end{itemize}
             
-\section{Exploring accuulations of change }
+\section{Exploring accumulations of change }
         \subsection{Intro to integral calculus}
-        let \(f(x)\)  be a  defined function.\\ 
-        let \(\delta x_i\) be an infinitesimally small distance of the interval \([a, b]\). \\ 
-        the area under the curve of \(f(x)\) between the interval \([a, b]\)
-        is represented as: 
-            \[\lim_{n \to \infty } \sum_{i=1}^{n} f(x_i) \delta x_i = \int_{a}^{b} f(x)dx\] 
-        \(\int_{a}^{b}\) represents the integral of the function \(f(x)\)
+            let \(f(x)\)  be a  defined function.\\ 
+            let \(\delta x_i\) be an infinitesimally small distance of the interval \([a, b]\). \\ 
+            the area under the curve of \(f(x)\) between the interval \([a, b]\)
+            is represented as: 
+                \[\lim_{n \to \infty } \sum_{i=1}^{n} f(x_i) \delta x_i = \int_{a}^{b} f(x)dx\] 
+            \(\int_{a}^{b}\) represents the integral of the function \(f(x)\)
+
+            \begin{figure}[ht]
+                \centering
+                \includegraphics[bb=0 0 717 432, width=0.7\textwidth]{images/intro_integral.png}
+                \caption{integrals}\label{fig:integral}
+            \end{figure}
+        \subsection{Definite integrals intro}
+            The area under the curve between the interval \([a,b]\) is denoted as: 
+                 \[\int_{a}^{b} f(x)dx\]
+            which is the definite integral of \(f(x)\) between two bounds.
+        \subsection{Exploring accumulations of change}
+            The definite integral can be used to express information about accumulation and net change in applied contexts.
+            the definite integral always gives us the net change in a quantity, not the actual value of that quantity\\
+            In differential calculus, the derivative \(f'\) of a function \(f\) gives the instantaneous rate of change of \(f\) for a given input.\\
+            for any rate function \(f\), its antiderivative \(F\) gives the accumulated value of the quantity whose rate is described by \(f\).\\\\
+            \begin{center}
+                \begin{tabular}{ c c c } 
+                    & Quantity & Rate \\
+                    \\
+                    \multirow{1}{10em}{Differential calculus } & \(f(x)\) & \(f'(x)\) \\\\ 
+                    \multirow{1}{10em}{Integral calculus} & \(F(x) = \int_{a}^{x}f(t)dt\) & \(f(x)\) \\ 
+            
+                    
+                \end{tabular} 
+            \end{center}
 
 \end{document}
