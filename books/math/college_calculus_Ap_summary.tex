@@ -3,7 +3,7 @@
 \usepackage{float}
 \usepackage{booktabs, 
             makecell, multirow, tabularx}
-
+\usepackage{xcolor}
 
 \title{derivative's}
 
@@ -314,6 +314,27 @@
                 \includegraphics[bb=0 0 355 244, width=0.75\textwidth]{images/trap_rule.png}
                 \caption{integrals}\label{fig:trapezoid rule}
             \end{figure} \\
+        \section{Riemann sums, summation notation and definite integral notation}
+            \subsection{Riemann sums in summation notation}
+                Imagine we want to approximate the area under the graph of f over the interval \([a,b]\) with \(n\) equal subdivisions.\\
+                Define \(\delta x\): let \(\delta x\) denote the width of each rectangle, then \(\delta x = \frac{b - a}{n}\)\\
+                Define \(x_i\): Let \(x_i\) denote the right endpoint of each rectangle, then \(x_i = a + \delta x \cdot i \).\\ 
+                Define the area of \(i^{th}\): The height of each rectangle is then \(f(x_i)\), and are of each rectangle is \(\delta x \cdot f(x_i)\).\\
+                sum the rectangles: Now we use summation notation to add all the areas. The values we use for i are different for left and right Riemann sums: 
+                \begin{itemize}
+                    \item When we are writing a right Riemann sum, we will take values of \(i\) from 1 to \(n\)
+                    \item However, when we are writing a left Riemann sum, we will take values of \(i\) from 0 to \(n - 1\)(this will give us the value of \(f\) at the left endpoint of each rectangle). 
+                \end{itemize}
+                \begin{center}
+                    \begin{tabular}{ c c  } 
+                        Left Riemann sum & Right Riemann sum  \\
+                        \\
+                        \(\sum_{i=0}^{n-1} \delta x \cdot f(x_i)\) & \(\sum_{i=1}^{n} \delta x \cdot f(x_i)\) \\\\ 
+                       
+                
+                        
+                    \end{tabular} 
+                \end{center}
            
 
 \end{document}
