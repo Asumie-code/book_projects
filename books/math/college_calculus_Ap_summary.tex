@@ -368,5 +368,25 @@
                         \[\int_{a}^{a} f(x)dx = 0\]
                     Adding intervals: 
                         \[\int_{a}^{b} f(x)dx + \int_{b}^{c} f(x)dx = \int_{a}^{c} f(x)dx \]
-        
+        \section{The fundamental theorem of calculus and definite integrals II}
+                \subsection{the fundamental theorem of calculus II}
+                    let \(F(x) = \int_{c}^{x} f(t)dt\) and \(F'(x) = f(x)\). 
+                    then 
+                        \[F(b) - F(a) = \int_{c}^{b} f(t)dt - \int_{c}^{a} f(t)dt = \int_{a}^{b} f(t)dt\]
+                    OR 
+                        \[\int_{a}^{b} f(t)dt = F(b) - F(a)\]
+                \subsection{Antiderivative and indefinite integrals}
+                    The antiderivative of \(2x\) is \(\int 2x dx = x^{2} + c\).\\ 
+                    ther term \(\int 2x dx \) is called an indefinite integral. 
+                \subsection{Proof of the fundamental theorem of calculus}
+                    let \(F(x) = \int_{a}^{x} f(t)dt\) where \(a \le x \le b\). 
+                        \[F'(x) = \lim_{\delta x \to 0} \frac{F(x + \delta x) - F(x)}{\delta x} = \lim_{\delta x \to 0} \frac{\int_{a}^{x + \delta x} f(t)dt - \int_{a}^{x} f(t)dt }{\delta x} \] 
+                        \[= \lim_{\delta x \to 0} \frac{1}{\delta x} \int_{x}^{x + \delta x} f(t) dt\]
+                    according to the mean value theorem of definite integral, there exists  a c (where \(x \le c \le x + \delta x\)) such that: \[f(c)\delta x = \int_{x}^{x + \delta x} f(t)dt\]
+                    \[f(c) = \frac{1}{\delta x}\int_{x}^{x + \delta x} f(t)dt\]
+                    as consequence and according to the squeeze theorem: \\
+                        \(c \to x  \) as \(\delta x \to 0\).\\ 
+                        \(f(c) \to f(x)\) as  \(\delta x \to 0 \)
+                            \[x \le c(\delta x) \le x + \delta x\]
+                    \(\lim_{\delta x \to 0 } x = x\), \(\lim_{\delta x \to 0 } c(\delta x) = x\), \(\lim_{\delta x \to 0 } x + \delta x = x\)
 \end{document}
