@@ -484,4 +484,23 @@
                                 \item Total distance: `what is the total distance the particle has traveled between\ldots and\ldots ' \[\int_{a}^{b}|v(t)|dt\]
                                 \item Actual position: `What is the particle's position at\ldots ` \[C + \int_{a}^{b}v(t)dt\]
                             \end{itemize}
+                \section{Integration by parts}
+                            Integration by parts is used to find the integral of products: 
+                            \[\int u(x)v'(x)dx = u(x)v(x) - \int u'(x)v(x)dx \]
+                            \[\int u dv = uv - \int v du\]
+                            this method is considred as the reverse power product rule.
+                \section{Improper integrals}
+                            Improper integrals are definite integrals that cover an unbounded area. \\ 
+                            Two type of imporper integrals: 
+                            \begin{itemize}
+                                \item an integral where one of the endpoints is extended to infinity ex: 
+                                    \[\int_{1}^{\infty} \frac{1}{x^2} dx\]
+                                    which is viewed as: 
+                                    \[\lim_{b \to \infty} \int_{1}^{b} \frac{1}{x^2} dx\]
+                                \item an integral whose endpoints are finite, but the integrated funtion is unbounded at one (or two) of the endpoints ex:
+                                        \[\int_{0}^{1} \frac{1}{\sqrt{x}} dx\]
+                                        it can be viewed as the limit: 
+                                        \[\lim_{a \to 0^+} \int_{a}^{1} \frac{1}{\sqrt{x} dx}\]
+                            \end{itemize}
+                            When the limit exists we say the integral is \textbf{converget}, and when it doesn't we say it's \textbf{divergent}.
 \end{document}
