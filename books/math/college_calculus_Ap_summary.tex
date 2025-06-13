@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{graphicx}
+\usepackage{amsmath}
 \usepackage{float}
 \usepackage{booktabs, 
             makecell, multirow, tabularx}
@@ -503,7 +504,7 @@
                                         \[\lim_{a \to 0^+} \int_{a}^{1} \frac{1}{\sqrt{x} dx}\]
                             \end{itemize}
                             When the limit exists we say the integral is \textbf{converget}, and when it doesn't we say it's \textbf{divergent}.
-                \subsection{Approximating solution using Euler's method differential equation}
+                \section{Approximating solution using Euler's method differential equation}
                       let \(\frac{dy}{dx} = x  + y\) and \(f(1) = 2\).\\ 
                       \(f(3) \approx \)?\\ 
                       using Euler's method we chose step size of  \(\Delta x = 1\). \\ 
@@ -519,6 +520,39 @@
                        \[x_2 = x_1 + \Delta x \rightarrow x_2 = 2 + 1 = 3\]
                        \[y_2 = y_1 + \Delta y_1 \rightarrow y_2 = 5 + 7 \cdot 1 = 12\]
                        So \(f(3) \approx 12\).
+                \section{Logistic models with differential equations}
+                    \begin{figure}[ht]  
+                        \centering
+                        \includegraphics[bb=0 0 323 262, width=0.7\textwidth]{images/logistic_model.png}
+                        \caption{slope field}\label{fig:logistic model}
+                    \end{figure} 
+                            \subsection{The logistic growth model}
+                                let \(p\) be the population. 
+                                the  rate of change of the population with respect to time is proportional to the population times \(1 - \frac{p}{k}\) where  \(k\) is the upper limit that the population can get and \(p = 0\) is the lowest limit the polpulatoin can get.\\
+                                when the population at it's max limit k \(\frac{dp}{dt} = 0\). \\ 
+                                the logistic differential equation is given as: 
+                                \[\frac{dp}{dt} = rp(1 - \frac{p}{k})\]
+                                Logistic growth mean initially growing almost exponentially, but the growth slows as the function approaches a horizontal asymptote.\\ 
+                                In logistic growth, the carrying capacity is the upper limit the quantity grows towards \(\lim_{t \to \infty} P(t)\).\\
+                                for any logistic model \(P\), the limit  \(\lim_{t \to \infty} \frac{dP}{dt} = 0\).\\ 
+                                so  at the carrying capacity \(\frac{dP}{dt} = 0 \). 
+                \section{Arc length}
+                    let \(ds\) be small change in the arc length and \(dx, dy\) small change in \(x, y\) with respect to \(ds\).
+                    the arc length over the interval \([a, b]\) is given as: 
+                    \[\int ds = \int \sqrt{dx^2  + dy^2}\]
+                    \[= \int \sqrt{dx^2 (1 + {(\frac{dy}{dx})}^2)}\]
+                    \[\boxed{= \int_{a}^{b} \sqrt{1 + {(\frac{dy}{dx})}^2} dx}\]
+                \section{Defining and differentiating parametric equations}
+                    A parametric equation expresses coordinates (like x and y) as functions of a third variable, called a parameter (often represented by t) this is a way to define a curve or surface by describing how each coordinates changes with respect to the parameter. 
+                    ex: \\
+                    line \(x = at + b\), \(y = ct + d\) where a, b,c, and d are constants 
+                    \subsection{Parametric equation differentiation}
+                        to defferentiate a function that is defined parametrically by the equation \(x = u(t)\) and \(y = v(t)\).\space(where u and v are any function of t) we use the following rule: 
+
+                        \[\frac{dy}{dx} = \frac{\left(\frac{dy}{dt}\right)}{\left(\frac{dx}{dt}\right)} = \frac{u'(t)}{v'(t)}\]
+
+
+                    
                     
                 
 
