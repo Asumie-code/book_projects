@@ -550,6 +550,48 @@
                         to defferentiate a function that is defined parametrically by the equation \(x = u(t)\) and \(y = v(t)\).\space(where u and v are any function of t) we use the following rule: 
 
                         \[\frac{dy}{dx} = \frac{\left(\frac{dy}{dt}\right)}{\left(\frac{dx}{dt}\right)} = \frac{u'(t)}{v'(t)}\]
+                \section{Second derivatives of parametric equations}
+                    the second derivative is found with the following rule. 
+                    \[\frac{d^2y}{dx^2} = \frac{\frac{d}{dt} (\frac{dy}{dx})}{(\frac{dx}{dt})} = \frac{\frac{d}{dt}(\frac{v'(t)}{u'(t)})}{u'(t)}\]
+                \section{Parametric curve arc length}
+                    Arc length of a parametric curve over the interval \([a, b]\): 
+                    \[\int_{a}^{b} \sqrt{{(\frac{dx}{dt})}^2 + {(\frac{dy}{dt})}^2} dt = \int_{a}^{b} \sqrt{{u'(t)}^2 + {v'(t)}^2} dt\]
+                \section{Defining and differentiating vector-valued functions}
+                    A vector-valued function is a function that takes one or more variables as input and ouputs a vector.\\
+                    General form in 2d: 
+                    \[\vec{r}(t) = \langle x(t), y(t) \rangle \]                
+                    or 
+                    \[\vec{r}(t) = x(t)\hat{\imath} + y(t)\hat{\jmath}\]
+                    \subsection{vector-valued functions differentiation}
+                    the derivative of vvf is the derivative of it's compnents. 
+                         \[\vec{r}  '(t) = \langle x'(t), y'(t) \rangle \] 
+                \section{Solving motion prolbems using vvf}
+                    the vvf of velocity is given as  
+                    \[\vec{v}(t) = (\frac{dx}{dt}, \frac{dy}{dt})\]
+                    the vvf of acceleratoin is given assume
+                    \[\vec{a}(t)= \frac{d}{dt}\vec{v}(t) = (\frac{d^2x}{dt^2}, \frac{d^2y}{dt^2})\]
+                    the magnitude of displacement is given as 
+                    \[\sqrt{{(\Delta x)}^2 + {(\Delta y)}^2 }\]
+                    where 
+                    \[\Delta x = \int_{a}^{b} x(t)dt\]
+                    \[\Delta y = \int_{a}^{b} y(t)dt\]
+                \section{Defining polar coordinates and differentiating in polar form}
+                    A polar function is defined using polar coordinates instead of cartesian (rectangular) coordinates.\\
+                    polar coordinates: 
+                    \begin{itemize}
+                        \item r: the distance from the origin (called the pole)
+                        \item \(\theta\): the angel from the positive x-axis (called the polar axis) measured in radians or degrees.
+                    \end{itemize}
+                     we write \((r, \theta)\) instead of \((x, y)\), polar function expresses r as a function of \(\theta\).
+                     \[r = f(\theta)\] 
+                     to convert between cartesian and polar: 
+                     \begin{itemize}
+                        \item  From polar to cartesian: \(x = r \cos{\theta}, y = r \sin{\theta}\)
+                        \item from Cartesian to polar \(r = \sqrt{x^2 + y^2}, \theta = \arctan (\frac{y}{x})\)
+                     \end{itemize}
+                     polar function differentiation: 
+                    \[\frac{d}{d\theta} y(\theta) = r(\theta)\sin{\theta}\]
+                    \[\frac{d}{d\theta} x(\theta) = r(\theta)\cos{\theta}\]
 
 
                     
