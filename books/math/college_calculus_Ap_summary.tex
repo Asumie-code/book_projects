@@ -661,8 +661,28 @@
                     \subsection{Formula for slope in polar coordinates}
                      \[\frac{dy}{dx} = \frac{r'\sin(\theta) + r\cos(\theta)}{r'\cos(\theta) - r\sin(\theta)}\]
                      \subsection{Polar area formula}
-                        \[A = \frac{1}{2} \int_{\alpha}^{\beta} r(\theta)^2 d\theta\]
+                        \[A = \frac{1}{2} \int_{\alpha}^{\beta} r{(\theta)}^2 d\theta\]
+                     \subsection{General rule for finding \((\alpha , \beta)\)}
+                        \begin{itemize}
+                            \item A:find where the curve starts/ends. 
+                                \begin{itemize}
+                                    \item solve \(r(\theta) = 0\). 
+                                    \item values of \(\theta\) are where the curve crosses the pole (origin). 
+                                    \item they often serve as the bounds for on loop. 
+                                \end{itemize}
+                            \item B:look at symmetry 
+                                \begin{itemize}
+                                    \item many polar curves are symmetric. 
+                                    \item symmetric about the x-axis \(\rightarrow\) integrate from 0 to \(\frac{\pi}{2}\) and multiply by 2. 
+                                    \item symmetric about the y-axis \(\rightarrow\) integrate from 0 to \(\frac{\pi}{2}\) and multiply by 2. 
+                                \end{itemize}
+                            \item C:make sure \(r \geq 0 \)
+                                \begin{itemize}
+                                    \item if \(r(\theta)\) becomes negative, the curve is traced on the opposite side. 
+                                    \item either adjust limits or take absolute value in the integral
+                                \end{itemize}
 
+                        \end{itemize}
 
                     
                     
