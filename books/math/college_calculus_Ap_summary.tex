@@ -683,7 +683,36 @@
                                 \end{itemize}
 
                         \end{itemize}
+                
+                    \section{Convergent and divergent sequences}
+                        A sequence \({a_n}\) converges to \(L\) if for every small number \(\beta > 0 \), there exists \(N\) such that for all \(n > N\), \(|a_n - L| < \beta\). \\
+                        Examples: 
+                        \begin{itemize}
+                            \item \(\frac{1}{n} \rightarrow 0\)
+                            \item \(\frac{2n}{n + 1} \rightarrow 2\)
+                            \item \({(\frac{1}{n})}^2 \rightarrow 0\)
+                        \end{itemize}
 
+                        A sequence is divergent if it does not converge (diverge) to a finite number. \\ 
+                        A sequence diverges when it: 
+                        \begin{itemize}
+                            \item Goes to infinity: \(a_n = n \rightarrow \infty\)
+                            \item Oscillates without approaching a single value: \(a_n = {(-1)}^2\)
+                        \end{itemize}
+                        \subsection{Partial Sum}
+                            The \(n\)-th partial sum of a series is the sum of the first \(n\) terms: \\
+                                \[S_n = \sum_{k = 1}^{n} a_k = a_1 + a_2 + a_3 + \cdots + a_n\]
+                            so 
+                            \begin{itemize}
+                                \item \(S_1 = a_1\)
+                                \item \(S_2 = a_1 + a_2\)
+                                \item \(S_3 = a_1 + a_2 + a_3\)
+                            \end{itemize}
+                            the sequence of partial sum \({S_n}\) tells us if the series converges or diverges: 
+                            \begin{itemize}
+                                \item if \(\lim_{n \rightarrow \infty} S_n = S \) (a finite number), then the series \(\sum a_n\) converges to \(S\).
+                                \item if the limit does not exist (goes to \(\infty , -\infty\) or oscillates), the series diverges.
+                            \end{itemize}
                     
                     
                 
