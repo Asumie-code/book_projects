@@ -713,6 +713,28 @@
                                 \item if \(\lim_{n \rightarrow \infty} S_n = S \) (a finite number), then the series \(\sum a_n\) converges to \(S\).
                                 \item if the limit does not exist (goes to \(\infty , -\infty\) or oscillates), the series diverges.
                             \end{itemize}
+                         \subsection{Partial sum formula for common type of series}
+                            Arithmetic series (linear sequence)\\ 
+                            if \(a_k\) is arithmetic: 
+                                \[a_k = a_1 + (k - 1)d\]
+                            the partial sum is: 
+                                \[S_n = \frac{n}{2}(2a_1 + (n - 1)d)\]
+                            or equivalently: 
+                                \[S_n = \frac{n}{2}(a_1 + a_2)\]
+                            Geometric Series \\ 
+                            if \(a_k\) is geometric: 
+                                \[a_k = a_1r^{k-1}\]
+                            the partial sum is: 
+                                \[S_n = a_1 \frac{1 - r^n}{ 1 - r} , r \neq 1\]
+                    \section{Working with geometric series}
+                            let \(a_n\) be a gemoetric series, and let \(\sum_{k = 0}^{\infty} a_n(r^k) = \frac{a_1}{ 1 - r}\). \\ 
+                            \(a_n\) converges iff \(|r| < 1\).
+                    \section{nth-term divergence test}
+                          if \(\lim_{n \to \infty} a_n \neq 0\) or does not exist, then the serie \(\sum_{n = 1}^{\infty} a_n\) diverges. 
+                          \begin{itemize}
+                            \item nth test can only prove divergence, never convergence
+                            \item if \(\lim_{n \to \infty} a_n = 0\), the series might converge or diverge
+                          \end{itemize} 
                     
                     
                 
