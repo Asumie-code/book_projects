@@ -735,8 +735,39 @@
                             \item nth test can only prove divergence, never convergence
                             \item if \(\lim_{n \to \infty} a_n = 0\), the series might converge or diverge
                           \end{itemize} 
+                    \section{Integral test}
+                          let 
+                                \[\sum_{n = 1}^{\infty} a_n\]
+                          if \(a_n = f(n)\) where f(x) is: 
+                          \begin{itemize}
+                            \item continuous
+                            \item positive
+                            \item decreasing
+                          \end{itemize}
+                          for all  \(x \geq N\) (some starting point),\\ 
+                          then: 
+                          \(\sum_{n=1}^{\infty} a_n\) converges iff \(\int_{N}^{\infty} f(x)dx\) converges.
+                    \section{Harmonic series and p-series}
+                          \subsection{harmonic series}
+                            the harmonic series is the infinte series 
+                                \[\sum_{n=1}^{\infty} \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \cdots\]
                     
-                    
+                            it's called harmonic because th terms are the reciprocals of the positive integers, which are related to the harmonic mean in  mathematics.\\ 
+                            Key properties: 
+                            \begin{itemize}
+                                \item it is a p-series with p = 1
+                                \item the harmonic series diverges, even though \(a_n \rightarrow 0\).
+                            \end{itemize}  
+                          \subsection{P-series}
+                            A p-series is an infinite series of the form: 
+                                    \[\sum_{n = 1}^{\infty} \frac{1}{n^p}\]  
+                            where \(p > 0\) is a real number.\\ 
+                            Convergence Test: 
+                            the convergence depends entirely on the value of p: 
+                            \begin{itemize}
+                                \item if \(p > 1\), the series converges. 
+                                \item if \(0 < p \leq 1\), the series diverges.
+                            \end{itemize}
                 
 
 \end{document}
