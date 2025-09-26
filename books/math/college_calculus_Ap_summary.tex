@@ -738,7 +738,7 @@
                     \section{Integral test}
                           let 
                                 \[\sum_{n = 1}^{\infty} a_n\]
-                          if \(a_n = f(n)\) where f(x) is: 
+                          if \(a_n = f(n)\) where \(f(x)\) is: 
                           \begin{itemize}
                             \item continuous
                             \item positive
@@ -768,6 +768,39 @@
                                 \item if \(p > 1\), the series converges. 
                                 \item if \(0 < p \leq 1\), the series diverges.
                             \end{itemize}
+                    \section{Comparison tests for convergence}
+                            let \(\sum a_n \) and \(\sum b_n\) with \(a_n \geq 0 \) and \(b_n \geq 0\) for all \(n\) (nonnegative terms).\\
+                            The Test\\
+                            if \(0 \leq a_n \leq b_n\) for all \(n\) (or for sufficiently large n)
+                            \begin{itemize}
+                                \item if \(\sum b_n\) converges, then \(\sum a_n\) also converges. 
+                                \item if \(\sum a_n\) diverges, then \(\sum b_n\) also diverges. 
+                            \end{itemize}
+                        \subsection{Limit test comparison}
+                            let \(\sum a_n \) and \(\sum b_n\)  where \(a_n > 0\) and \(b_n > 0\). 
+                            let: 
+                                \[L = \lim_{n \to \infty} \frac{a_n}{b_n}\]
+                                \begin{itemize}
+                                    \item if \(0 < L < \infty\), then both series either converge or diverge. 
+                                    \item if \(L = 0\) and \(\sum b_n\) converges, then \(\sum a_n\) also converges
+                                    \item if \(L = \infty\) and \(\sum b_n\) diverges, then \(\sum a_n\) also diverges.
+                                \end{itemize}
+                    \section{Alternating series test}
+                                An alternating series is one where the signs of the terms switch between positive and negative: 
+                                    \[\sum_{n = 1}^{\infty} {(-1)}^{n-1} b_n\]
+                                    or 
+                                    \[\sum_{n = 1}^{\infty} {(-1)}^{n} b_n\]
+                                \subsection{the test} 
+                                    the series 
+                                    \[\sum {(-1)}^{n} b_n\]
+                                    converges if BOTH of these condition hold: 
+                                    \begin{itemize}
+                                        \item \(b_{n+1} \leq b_n \) for all \(n\) (the terms are monotonically decreasing)
+                                        \item \(\lim_{n \to \infty} b_n = 0\)
+                                    \end{itemize}
+                                    if both conditions are satisfied, the series converges.
+                                
+
                 
 
 \end{document}
