@@ -799,8 +799,24 @@
                                         \item \(\lim_{n \to \infty} b_n = 0\)
                                     \end{itemize}
                                     if both conditions are satisfied, the series converges.
-                                
+                    \section{Taylor and Maclaurin polynomials}
+                                \subsection{Taylor Polynomial (centered at a)}
+                                    let \(f(x)\) be a function that is \(n\)-times differentiable at \(x = a\). 
+                                    The Taylor polynomial of degree \(n\) centered at \(a\) is: 
 
-                
+                                        \[P_n(x) = f(a) + f'(a)(x - a) + \frac{f''(a)}{2!}{(x - a)}^{2} + \cdot + \frac{f^{(n)}(a)}{n!}{(x - a)}^{n}\]
+                                    or in summation form: 
+                                        \[P_n(x) = \sum_{k = 0}^{n} \frac{f^{(k)}(a)}{k!}{(x - a)}^k\]
+                                
+                                 \subsection{Maclaurin polynomial}
+                                     the Maclaurin polynomial is just a special case of the Taylor polynomial with \(a = 0\).
+                                        \[p_n(x) = f(0) + f'(0)x + \frac{f''(0)}{2!}x^2 + \cdot + \frac{f^{(n)}(0)}{n!} x^n\]
+                                    Or equivalently: 
+                                        \[p_n(x) = \sum_{k = 0}^{n} \frac{f^{(k)}(0)}{k!} x^k\]
+                                 \subsection{Key point}
+                                    \begin{itemize}
+                                        \item Taylor polynomial approximates a function near a general point \(a\). 
+                                        \item Maclaurin polynomial is just a Taylor polynomial centered at 0.
+                                    \end{itemize}
 
 \end{document}
