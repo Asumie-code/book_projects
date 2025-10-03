@@ -818,5 +818,48 @@
                                         \item Taylor polynomial approximates a function near a general point \(a\). 
                                         \item Maclaurin polynomial is just a Taylor polynomial centered at 0.
                                     \end{itemize}
-
+                        \section{Largrange error bound} 
+                                \subsection{Taylor polynomial remainder}
+                                    if \(f\) is \((n + 1)\)-times differentiable at \(a\), the taylor polynomial of degree \(n\) around \(a\) is 
+                                        \[T_n(x) = f(a) + f'(a)(x - a) + \frac{f''(a)}{2!}{(x - a)}^{2} + \cdot + \frac{f^{(n)}(a)}{n!}{(x - a)}^{n} \]
+                                    Then,
+                                        \[f(x)  = T_n(x) + R_n(x)\]
+                                    where \(R_n(x)\) is the remainder term.\\ 
+                                    Forms of the Remainder 
+                                    \begin{itemize}
+                                        \item Largrange's Form (most common in analysis)
+                                            \[R_n(x) = \frac{f^{(n + 1)}(\beta)}{(n + 1)!} {(x - a)}^{(n + 1)}\]
+                                            for some \(\beta\) between \(a\) and \(x\).
+                                        \item Integral Form 
+                                            \[R_n(x) = \frac{1}{n!} \int_{a}^{x} f^{(n + 1)}(t){(x - t)}^n dt\]
+                                    \end{itemize}
+                                \subsection{Lagrange error bound}
+                                    is thestandard practical way to bound Taylor remainder. \\
+                                    if \(f\) is \((n + 1)\)-tiems continously differentiable on an interval containing \(a\) and \(x\), then the Taylor remainder after degree \(n\) satisfies the lagrange form 
+                                        \[|R_n(x)| \leq \frac{M}{(n+1)!} |x - a|^{n+1}\]
+                                    where \(M\) is any constant with 
+                                        \[M \geq \max_{t \subset I}|f^{(n + 1)}(t)\]
+                        \section{Power series}
+                                    A power series is an infinte series of the form 
+                                        \[\sum_{n=0}^{\infty} c_n {(x - a)}^n\]
+                                        where 
+                                        \begin{itemize}
+                                            \item \(c_n\) are coefficients 
+                                            \item \(a\) is the center of the series
+                                            \item x is the variable
+                                        \end{itemize}
+                                    \subsection{Convergence of a power series}
+                                        for a given \(x\), the series may converge or diverge.\\ 
+                                        There is always a radius of convergence \(R \geq 0\) such that: 
+                                        \begin{itemize}
+                                            \item The series converges for all \(| x - a| < R\)
+                                            \item Diverges for all \(| x - a| > R\). 
+                                            \item On the boundary \(| x - a| = R\), each case must be checked separately.
+                                        \end{itemize}
+                                    \subsection{Finding the radius of convergence}
+                                        use the ration test or root test 
+                                            \[R = \lim_{n \to \infty} | \frac{c_n}{c_n + 1}|\]
+                                        or 
+                                            \[\frac{1}{R} = \lim_{n \to \infty}\sup \sqrt[n]{|c_n|}\] 
+                                        
 \end{document}
