@@ -799,6 +799,16 @@
                                         \item \(\lim_{n \to \infty} b_n = 0\)
                                     \end{itemize}
                                     if both conditions are satisfied, the series converges.
+                    \section{Ratio test}
+                                 let \(\sum_{n = 1}^{\infty} a_n\) be an infinite series with nonzero terms.\\ 
+                                 Define     
+                                        \[L = \lim_{n \to \infty} |\frac{a_n + 1}{a_n}|\]
+                                then: 
+                                    \begin{itemize}
+                                        \item \(L < 1\) series converges absolutely. 
+                                        \item \(L > 1\) or \(L = \infty\) series diverges.
+                                        \item \(L = 1\)  test is inconclusive. 
+                                    \end{itemize}
                     \section{Taylor and Maclaurin polynomials}
                                 \subsection{Taylor Polynomial (centered at a)}
                                     let \(f(x)\) be a function that is \(n\)-times differentiable at \(x = a\). 
@@ -892,4 +902,52 @@
                                             \end{itemize}
                                         Note: \\ 
                                         when finding power series of function we use algebraic manipulation to derive the series, when finding Maclaurin series of a function we use the forumla for Maclaurin series, common function have the equal power serie and maclaurin series expansions. 
+                                   \subsection{Radius of Convergence (R) vs Interval of Convergence}
+                                            The radius of Convergence R tells you how far fromt he center \(a\) the series converges \\ 
+                                            Formally, it's the number \( R \geq 0\) such that: 
+                                            \begin{itemize}
+                                                \item  the series converges when \(| x - a | < R\). 
+                                                \item the series diverges when \(|x - a| > R\). 
+                                            \end{itemize}
+                                             to find \(R\) use ratio test or root test: 
+                                                \[R = \frac{1}{\lim \sup_{n \to \infty} |c_{n+1}/C_n|}\     or\  \frac{1}{\lim \sup_{n \to \infty}\sqrt[n]{|c_n|}} \]
+                                            \\
+                                            The Interval of convergence is the actual set of \(x\)-values for which the series converges. 
+                                                \begin{itemize}
+                                                    \item It always includes all \(x\) satisfying \(|x - a| < R\). 
+                                                    \item Check the endpoints \(x = a \pm R \) separetely---because the series may or may not converge there.
+                                                \end{itemize}
+                                                 So:\\ 
+                                                 \(Interval\ of\ Convergence = (a- R, a + R)\), possibly including endpoints.
+
+                                   \subsection{Euler's forumla and Euler's identity}
+                                            Euler's formula 
+                                                \[ e^{ix} = \cos(x) + i\sin(x)\]
+                                            Euler's identity \\
+                                            if \(x = \pi\)
+                                                \[e^{i\pi} + 1 = 0\]
+                                \section{Representing functions as power series}
+                                        \subsection{Intergrating power series}
+                                                let     
+                                                    \[\sum_{n = 0}^{\infty} c_n{(x  - a)}^n\]
+                                                if the power series converges for \(| x - a| < R\) (radius of convergence \(R > 0\)), then inside that interval, you can intergrate it term by term: 
+                                                    \[\int \sum_{n = 0}^{\infty} c_n{(x  - a)}^n dx = C + \sum_{n = 0}^{\infty} \int {(x - a)}^n dx = C + \sum_{n = 0}^{\infty} c_n \frac{{(x - a)}^{n + 1}}{n + 1}\]
+                                                or, equivalently (index shifted): 
+                                                    \[\int \sum_{n = 0 }^{\infty} {(x - a)}^n dx = C + \sum_{n = 0}^{\infty} \frac{c_n - 1}{n}{(x - a)}^n\]
+                                                Radius of convergence when integrating term by term remains the same R. \\ 
+                                                The interval of convergence might change slightly  at the endpoints.
+                                        \subsection{Differentiating power series}
+                                                let  
+                                                    \[\sum_{n = 0}^{\infty} c_n{(x  - a)}^n\]
+                                                Differentiation Rule (Term by Term)
+                                                    \[f'(x) = \frac{d}{dx} (\sum_{n = 0}^{\infty} c_n{(x - a)}^n) = \sum_{n = 1 }^{\infty} nc_n {(x - a)}^{n - 1}\]        
+                                                Note that: 
+                                                    \begin{itemize}
+                                                        \item the \(n = 0\) term disappears because it's constant. 
+                                                        \item the new series start at \(n = 1\)
+                                                    \end{itemize}
+                                                Radius of convergence\\ 
+                                                    Differentiating does not change the radius of convergence.\\ 
+                                                    the new derivative series converges for the same \(| x - a | < R\). \\ 
+                                                    however, the endpoints may change. 
 \end{document}
