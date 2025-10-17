@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage{graphicx}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{float}
 \usepackage{booktabs, 
             makecell, multirow, tabularx}
@@ -950,4 +951,10 @@
                                                     Differentiating does not change the radius of convergence.\\ 
                                                     the new derivative series converges for the same \(| x - a | < R\). \\ 
                                                     however, the endpoints may change. 
+                                        \section{Formal definition for limit of sequence}
+                                                    let \(a_n\) be a sequence of real numbers and let \(L\) be a real number\\ 
+                                                    we say that 
+                                                        \[\lim_{n \to \infty} a_n = L\]
+                                                    iff 
+                                                        \[\forall \epsilon  > 0\ , \exists N \in \mathbb{N}\ such\ that\ \forall n \geq N\ , |a_n - L | < \epsilon \]
 \end{document}
